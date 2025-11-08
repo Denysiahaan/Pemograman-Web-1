@@ -1,0 +1,213 @@
+/* --- General Body, Nav, Footer (Common) --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.page-content {
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+}
+a {
+    color: #0277bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #01579b;
+    text-decoration: underline;
+}
+
+/* --- Navigation Bar (Header) --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparan untuk hero */
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+.navbar.solid-nav {
+    background-color: #000; /* Hitam solid */
+}
+.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+.navbar nav ul li {
+    margin-left: 30px;
+}
+.navbar nav ul li a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.navbar nav ul li a:hover {
+    color: #e0f2f7;
+    border-bottom: 2px solid #0277bd;
+    text-decoration: none;
+}
+.navbar nav ul li a.active {
+    color: #0277bd;
+    border-bottom: 2px solid #0277bd;
+}
+
+/* --- Content Sections (Box Putih) --- */
+.content-section {
+    padding: 60px 50px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.content-section h2 {
+    text-align: center;
+    color: #0277bd;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+}
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #0277bd;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+.content-section h3 {
+    color: #01579b;
+    font-size: 1.5em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* --- SPESIFIK UNTUK CONTACT.HTML --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn-submit {
+    background-color: #0277bd;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-submit:hover {
+    background-color: #01579b;
+    transform: translateY(-2px);
+}
+.contact-links-title {
+    text-align: center;
+    margin-top: 40px;
+}
+.contact-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.contact-links li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #e0f2f7;
+    border: 2px solid #0277bd;
+    color: #0277bd;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.contact-links li a:hover {
+    background-color: #0277bd;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-3px);
+}
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #333;
+    color: #ddd;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+/* Footer di halaman index (tidak terpakai di sini, tapi tidak masalah) */
+.footer-fixed {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ddd;
+    padding: 20px 0;
+}
+
+/* STYLE BARU UNTUK JAM */
+#clock-container {
+    color: #0277bd; /* Warna biru, senada dengan tema */
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* --- Responsive Design (Umum) --- */
+@media (max-width: 768px) {
+    .navbar nav ul { justify-content: center; padding-right: 0; }
+    .navbar nav ul li { margin: 0 10px; }
+    .page-content { padding-top: 60px; }
+    .content-section { padding: 40px 20px; margin: 20px; }
+    .content-section h2 { font-size: 2em; }
+}
+
+@media (max-width: 480px) {
+    .navbar nav ul { flex-direction: column; align-items: center; padding-top: 10px; }
+    .navbar nav ul li { margin: 8px 0; }
+}
